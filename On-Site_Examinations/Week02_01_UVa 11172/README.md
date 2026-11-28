@@ -86,44 +86,9 @@ END
 ```
 
 ## 5. Fail Code vs Correct Code
-
 ### Fail Code
 
-The original failed source code is not available.
-
-The following code is an example of a possible
-incorrect approach, not an actual failed submission.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int t, a, b;
-    cin >> t;
-
-    while (t--) {
-        cin >> a >> b;
-
-        if (a > b) {
-            cout << ">" << endl;
-        } else {
-            cout << "<" << endl;
-        }
-    }
-
-    return 0;
-}
-```
-
-**Why it could fail:**
-
-- The program only handles two possible relationships.
-- It does not check whether both numbers are equal.
-- If a and b are equal, the program incorrectly
-  prints "<".
-- For example, input 10 10 should produce "=",
-  but this approach produces "<".
+No previous failed source code is available for this problem.
 
 ### Correct Code
 
@@ -153,13 +118,14 @@ int main() {
 
 **Why it works:**
 
-- The if statement checks whether a is greater than b.
-- The else if statement checks whether a is less than b.
+- The program compares two integers using conditional statements.
+- The if statement handles the greater-than condition.
+- The else if statement handles the less-than condition.
 - The else statement handles equal numbers.
 - All three possible relationships are covered.
-- The int data type supports the required input range
-  on a standard 32-bit system.
 - The while loop processes exactly t test cases.
+```
+
 
 ## 6. Test Evidence
 
