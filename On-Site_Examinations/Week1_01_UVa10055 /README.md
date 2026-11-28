@@ -165,11 +165,12 @@ ChatGPT was used to help me understand the problem,
 provide a C++ solution, explain how the code works,
 and prepare the Markdown explanation.
 
+
 ### AI Usage Record
 
 | Problem ID / Title | AI Tool Used | How It Was Used | Verification Performed Independently |
 |---|---|---|---|
-| UVa 10055 - Hashmat the Brave Warrior | ChatGPT | C++ solution, explanation of the algorithm, and README assistance | Not yet verified |
+| UVa 10055 - Hashmat the Brave Warrior | ChatGPT | C++ solution, explanation of the algorithm, and README assistance | Yes, verified independently. |
 
 ## 9. Final Re-review Checklist
 
