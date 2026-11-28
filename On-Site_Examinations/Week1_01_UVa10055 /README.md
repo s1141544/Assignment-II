@@ -1,3 +1,4 @@
+
 # Code Review Report: UVa 10055 - Hashmat the Brave Warrior
 
 ## 1. Problem Information
@@ -7,36 +8,43 @@
 - **Problem Title:** Hashmat the Brave Warrior
 - **Problem Link:** https://onlinejudge.org/external/100/10055.pdf
 - **Language / Version:** C++
-- **Submission Result:** Not Accepted
+- **Submission Result:** Not Submitted
 - **Source Code (Initial/Fail):** Not available
 - **Source Code (Final):** [src](./src)
 - **Review Date:** 2026-11-28
 
 ## 2. Problem Statement in My Own Words
 
-This problem asks us to calculate the difference between two numbers.
+This problem asks us to calculate the absolute difference
+between two numbers.
 
 - The input contains two integers on each line.
-- The output is the absolute difference between the two integers.
-- The numbers can be as large as 2^32.
-- The order of the input numbers may be different.
-- The program must continue reading input until End of File (EOF).
+- The output is the difference between the two integers.
+- The input numbers can be as large as 2^32.
+- The order of the two numbers may be different.
+- The result must always be non-negative.
+- The program continues reading input until EOF.
 
 ## 3. Thinking Logic and Solution Strategy
 
 ### Initial Thoughts
 
-- A simple approach is to subtract one number from another.
-- However, the result can be negative if the second number is larger.
-- Using int may cause problems when the input numbers are too large.
+- The problem can be solved using subtraction.
+- The order of the two numbers must be considered.
+- Subtracting a larger number from a smaller number
+  would produce a negative result.
+- A suitable data type is needed because the input
+  numbers can be very large.
 
 ### Final Strategy
 
-- Use long long to store large integer values.
+- Declare two variables, a and b, using long long.
 - Use a while loop to read input until EOF.
 - Compare the two numbers using an if-else statement.
 - Subtract the smaller number from the larger number.
 - Print the result on a separate line.
+- Consider equal numbers, zero values, reversed input,
+  and large numbers.
 
 ### Complexity Analysis
 
@@ -44,8 +52,13 @@ This problem asks us to calculate the difference between two numbers.
 - **Space Complexity:** O(1)
 
 The variable n represents the number of input pairs.
-Each pair requires one comparison and one subtraction.
-The program only uses two variables, so the memory usage is constant.
+
+Each input pair requires one comparison and one
+subtraction. Therefore, the execution time increases
+linearly with the number of input pairs.
+
+The program only uses two variables, so the additional
+memory usage is constant.
 
 ## 4. Pseudocode
 
@@ -53,11 +66,11 @@ The program only uses two variables, so the memory usage is constant.
 START
 1. Declare two variables, a and b, using long long.
 2. WHILE input a and b is available:
-3.     IF a > b:
+       IF a > b:
            Print a - b.
        ELSE:
            Print b - a.
-4. END WHILE.
+3. END WHILE.
 END
 ```
 
@@ -65,7 +78,8 @@ END
 
 ### Fail Code
 
-No previous failed source code is available for this problem.
+No previous source code or failed submission is
+available for this problem.
 
 ### Correct Code
 
@@ -92,10 +106,12 @@ int main() {
 
 **Why it works:**
 
+- The if-else statement compares the two numbers.
 - The smaller number is subtracted from the larger number.
 - The result is always non-negative.
 - The long long data type supports large input values.
-- The while loop reads all input pairs until EOF.
+- Equal numbers produce a result of zero.
+- The while loop processes all input pairs until EOF.
 
 ## 6. Test Evidence
 
@@ -109,39 +125,51 @@ int main() {
 | Edge case | 12 10 | 2 | Pending | Reversed input |
 | Edge case | 0 0 | 0 | Pending | Zero values |
 
-The test cases are prepared to check whether the program handles normal cases, large numbers, and different input orders correctly.
+These test cases are designed to verify that the program
+handles different input orders, equal numbers, zero values,
+and large integers.
+
+Actual results must be recorded after testing the program.
 
 ## 7. Difference and Reflection
 
 ### Key Differences
 
-The following table compares a possible incorrect approach with the proposed solution.
+No previous failed source code is available.
+Therefore, a direct comparison cannot be made.
 
-| Item | Fail Code Example | Correct Code |
+| Item | Fail Code | Correct Code |
 |---|---|---|
-| Logic | Direct subtraction | Absolute difference |
-| Edge Cases | May produce negative results | Handles both input orders |
-| Output Handling | Can print negative numbers | Prints non-negative numbers |
-| Complexity | O(n) | O(n) |
-| Code Quality | Uses int | Uses long long |
+| Logic | Not available | Calculates the absolute difference |
+| Edge Cases | Not available | Handles equal numbers, zero, and reversed input |
+| Output Handling | Not available | Prints non-negative results on separate lines |
+| Complexity | Not available | O(n) time and O(1) space |
+| Code Quality | Not available | Simple and readable code using long long |
 
 ### Reflection
 
-- **Root cause:** Possible mistakes include ignoring the order of input numbers and choosing an unsuitable data type.
-- **Lesson learned:** [Describe what I learned about data types, conditional statements, and handling input until EOF.]
-- **Next action:** [Describe how I will check input constraints and test edge cases when solving similar problems.]
+- **Root cause:** No previous failed source code is
+  available to identify a specific error.
+
+- **Lesson learned:** [Describe what I learned about
+  conditional statements, integer data types, and
+  absolute differences.]
+
+- **Next action:** [Describe how I will check input
+  constraints and test different input cases before
+  submitting my code.]
 
 ## 8. AI Usage Disclaimer
 
 ChatGPT was used to help me understand the problem,
 provide a C++ solution, explain how the code works,
-and organize the explanation in Markdown format.
+and prepare the Markdown explanation.
 
 ### AI Usage Record
 
 | Problem ID / Title | AI Tool Used | How It Was Used | Verification Performed Independently |
 |---|---|---|---|
-| UVa 10055 - Hashmat the Brave Warrior | ChatGPT | C++ solution, explanation of the algorithm, and Markdown formatting | Yes, I tested the code and checked the output.|
+| UVa 10055 - Hashmat the Brave Warrior | ChatGPT | C++ solution, explanation of the algorithm, and README assistance | Not yet verified |
 
 ## 9. Final Re-review Checklist
 
