@@ -65,23 +65,7 @@ END
 
 ### Fail Code
 
-The original failed source code is not available.
-
-The following code is an example of a possible incorrect approach, not an actual failed submission.
-
-```cpp
-int a, b;
-
-while (cin >> a >> b) {
-    cout << a - b << endl;
-}
-```
-
-**Why it could fail:**
-
-- The result can be negative when a is smaller than b.
-- The int data type may not support large input values.
-- For example, input 10 12 would produce -2 instead of 2.
+No previous failed source code is available for this problem.
 
 ### Correct Code
 
