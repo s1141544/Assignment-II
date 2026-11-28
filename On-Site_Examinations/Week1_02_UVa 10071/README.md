@@ -8,53 +8,59 @@
 - **Problem Title:** Back to High School Physics
 - **Problem Link:** https://onlinejudge.org/external/100/10071.pdf
 - **Language / Version:** C++
-- **Submission Result:** Not Accepted
+- **Submission Result:** Not Submitted
 - **Source Code (Initial/Fail):** Not available
 - **Source Code (Final):** [src](./src)
 - **Review Date:** 2026-11-28
 
 ## 2. Problem Statement in My Own Words
 
-This problem asks us to calculate the displacement of a
-particle in twice the given time.
+This problem asks us to calculate the displacement
+of a particle in twice the given time.
 
 - The input contains two integers, v and t, on each line.
 - v represents the velocity of the particle at time t.
 - The velocity ranges from -100 to 100.
 - The time ranges from 0 to 200.
-- The output is the displacement of the particle at time 2t.
+- The output is the displacement at time 2t.
 - The program must continue reading input until EOF.
 
 ## 3. Thinking Logic and Solution Strategy
 
 ### Initial Thoughts
 
-- A possible approach is to use the formula for displacement.
-- However, the initial velocity and acceleration are not given.
-- Using v * t alone would not calculate the required
-  displacement at twice the given time.
+- The problem can be solved using a physics formula.
+- The initial velocity and acceleration are not given.
+- The displacement needs to be calculated at twice
+  the given time.
+- The solution must handle positive, negative,
+  and zero velocities.
 
 ### Final Strategy
 
-- Use two integer variables, v and t.
+- Declare two integer variables, v and t.
 - Use a while loop to read input until EOF.
-- Calculate the displacement using the formula 2 * v * t.
+- Calculate the displacement using 2 * v * t.
 - Print the result on a separate line.
-- Consider zero values, negative velocity, and maximum
-  input values.
 
-The formula works because, under constant acceleration:
+Under constant acceleration, the velocity formula is:
 
 v = u + a * t
 
 The displacement at time 2t is:
 
 s = u * (2t) + (1/2) * a * (2t)^2
+
+After simplification:
+
 s = 2 * t * (u + a * t)
+
+Since v = u + a * t:
+
 s = 2 * v * t
 
-Therefore, the initial velocity and acceleration
-do not need to be calculated separately.
+Therefore, the displacement can be calculated without
+knowing the initial velocity and acceleration separately.
 
 ### Complexity Analysis
 
@@ -62,11 +68,12 @@ do not need to be calculated separately.
 - **Space Complexity:** O(1)
 
 The variable n represents the number of input pairs.
+
 Each input pair requires a constant number of
 multiplication operations.
 
-The program only uses two integer variables, so the
-additional memory usage is constant.
+The program uses only two integer variables,
+so the additional memory usage is constant.
 
 ## 4. Pseudocode
 
@@ -74,9 +81,9 @@ additional memory usage is constant.
 START
 1. Declare two integer variables, v and t.
 2. WHILE input v and t is available:
-3.     Calculate displacement = 2 * v * t.
-4.     Print displacement.
-5. END WHILE.
+       Calculate displacement = 2 * v * t.
+       Print displacement.
+3. END WHILE.
 END
 ```
 
@@ -84,7 +91,8 @@ END
 
 ### Fail Code
 
-No previous failed source code is available for this problem
+No previous source code or failed submission
+is available for this problem.
 
 ### Correct Code
 
@@ -106,11 +114,12 @@ int main() {
 **Why it works:**
 
 - The formula 2 * v * t calculates the required displacement.
-- The program supports positive and negative velocities.
-- Zero input values are handled correctly.
-- The maximum possible absolute result is 40000,
-  which fits in a standard 32-bit int.
-- The while loop processes all input pairs until EOF.
+- The program handles positive and negative velocities.
+- Zero values are handled correctly.
+- The maximum absolute result is 40000, which fits
+  within the range of a standard 32-bit int.
+- The while loop reads all input pairs until EOF.
+- Each result is printed on a separate line.
 
 ## 6. Test Evidence
 
@@ -125,46 +134,50 @@ int main() {
 | Edge case | 0 100 | 0 | Pending | Zero velocity |
 | Edge case | -5 12 | -120 | Pending | Negative velocity |
 
-The test cases are designed to verify normal calculations,
-boundary values, zero values, and negative velocities.
+These test cases are designed to verify that the
+program handles normal cases, boundary values,
+zero values, and negative velocities.
 
 ## 7. Difference and Reflection
 
 ### Key Differences
 
-The following table compares a possible incorrect approach
-with the proposed correct solution.
+No previous failed source code is available.
+Therefore, a direct comparison cannot be made.
 
-| Item | Fail Code Example | Correct Code |
+| Item | Fail Code | Correct Code |
 |---|---|---|
-| Logic | Uses v * t | Uses 2 * v * t |
-| Edge Cases | Zero values work, but nonzero products are incorrect | Handles all valid inputs |
-| Output Handling | Incorrect displacement | Correct displacement |
-| Complexity | O(n) | O(n) |
-| Code Quality | Simple but incorrect formula | Simple and correct formula |
+| Logic | Not available | Uses the formula 2 * v * t |
+| Edge Cases | Not available | Handles zero and negative values |
+| Output Handling | Not available | Prints displacement on each line |
+| Complexity | Not available | O(n) time and O(1) space |
+| Code Quality | Not available | Simple and readable code |
 
 ### Reflection
 
-- **Root cause:** A possible mistake is misunderstanding
-  the required time and forgetting the multiplication by 2.
+- **Root cause:** No previous failed source code is
+  available to identify a specific error.
 
 - **Lesson learned:** [Describe what I learned about
-  converting mathematical formulas into C++ code.]
+  applying mathematical formulas in C++ and processing
+  input until EOF.]
 
-- **Next action:** [Describe how I will review mathematical
-  formulas and test sample inputs before submitting code.]
+- **Next action:** [Describe how I will check mathematical
+  formulas, input constraints, and boundary cases before
+  submitting my code.]
 
 ## 8. AI Usage Disclaimer
 
 ChatGPT was used to help me understand the problem,
-provide a C++ solution, explain how the code works,
-and organize the explanation in Markdown format.
+provide a C++ solution, explain how the mathematical
+formula works, and organize the explanation in Markdown
+format.
 
 ### AI Usage Record
 
 | Problem ID / Title | AI Tool Used | How It Was Used | Verification Performed Independently |
 |---|---|---|---|
-| UVa 10071 - Back to High School Physics | ChatGPT | C++ solution, explanation of the algorithm, and Markdown formatting | Not yet verified |
+| UVa 10071 - Back to High School Physics | ChatGPT | C++ solution, explanation of the mathematical formula, and README assistance | Yes, verified independently. |
 
 ## 9. Final Re-review Checklist
 
