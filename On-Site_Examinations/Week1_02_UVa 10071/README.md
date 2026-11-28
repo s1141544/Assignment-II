@@ -84,31 +84,7 @@ END
 
 ### Fail Code
 
-The original failed source code is not available.
-
-The following code is an example of a possible incorrect
-approach, not an actual failed submission.
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int v, t;
-
-    while (cin >> v >> t) {
-        cout << v * t << endl;
-    }
-
-    return 0;
-}
-```
-
-**Why it could fail:**
-
-- The formula is missing the multiplication by 2.
-- The problem requires displacement at twice the given time.
-- For example, input 5 12 would produce 60 instead of 120.
+No previous failed source code is available for this problem
 
 ### Correct Code
 
